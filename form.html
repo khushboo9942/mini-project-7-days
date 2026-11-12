@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Witness Statement Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>Witness Statement Form</h1>
+        <p>
+            If you witnessed anything on the night of the
+            painting's disappearance, please complete this form.
+            Your information will help us investigate the mystery.
+        </p>
+    </header>
+
+    <main>
+        <form>
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="name">Witness Name:</label>
+                <input type="text" id="name" name="name"
+                       minlength="3" maxlength="50" required>
+                <br><br>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Observation Details</legend>
+
+                <label for="date">Date of Observation:</label>
+                <input type="date" id="date" name="date" required>
+                <br><br>
+
+                <label for="time">Time of Observation:</label>
+                <input type="time" id="time" name="time" required>
+                <br><br>
+
+                <p>Where were you?</p>
+
+                <input type="radio" id="inside" name="location"
+                       value="inside" required>
+                <label for="inside">Inside the gallery</label>
+                <br>
+
+                <input type="radio" id="outside" name="location"
+                       value="outside">
+                <label for="outside">Outside the gallery</label>
+                <br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>What Did You Notice?</legend>
+
+                <p>Select the details you noticed:</p>
+
+                <input type="checkbox" id="clothing" name="details"
+                       value="clothing">
+                <label for="clothing">Unusual clothing</label>
+                <br>
+
+                <input type="checkbox" id="direction" name="details"
+                       value="direction">
+                <label for="direction">Direction of movement</label>
+                <br>
+
+                <input type="checkbox" id="object" name="details"
+                       value="object">
+                <label for="object">A suspicious object</label>
+                <br><br>
+
+                <label for="category">Type of observation:</label>
+                <select id="category" name="category" required>
+                    <option value="">Select an option</option>
+                    <option value="person">Person</option>
+                    <option value="vehicle">Vehicle</option>
+                    <option value="sound">Sound</option>
+                    <option value="other">Other</option>
+                </select>
+                <br><br>   
+            </fieldset>
+
+            <fieldset>
+                <legend>Witness Statement</legend>
+
+                <label for="statement">
+                    Describe what you observed:
+                </label>
+                <br>
+
+                <textarea id="statement" name="statement"
+                          rows="6" cols="40"
+                          minlength="20" maxlength="500"
+                          placeholder="Write your statement here..."
+                          required>
+                </textarea>
+                <br><br>
+
+                <label for="evidence">Upload Evidence (Optional):</label>
+                <input type="file" id="evidence" name="evidence"
+                       accept="image/*,.pdf">
+                <br><br>
+            </fieldset>
+
+            <button type="submit">Submit Statement</button>
+            <button type="reset">Reset Form</button>
+
+        </form>
+    </main>
+
+</body>
+</html>
